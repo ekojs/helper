@@ -10,6 +10,9 @@
         }
     ],
     "minimum-stability": "stable",
+    "scripts": {
+	"test": "phpunit -c phpunit.xml --testdox tests"
+    },
     "autoload": {
         "files": ["src/Helper.php"]
     },
