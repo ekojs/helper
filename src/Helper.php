@@ -84,7 +84,7 @@ if(!function_exists('dateDiff')){
 }
 
 // @codeCoverageIgnoreStart
-if(!function_exists('get_client_ip')){
+if(!function_exists('getClientIp')){
 // @codeCoverageIgnoreEnd
 
 	/**
