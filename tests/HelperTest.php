@@ -36,7 +36,11 @@ class HelperTest extends TestCase {
     public function testDateDiffWithParams(): void
     {
 	$this->assertEquals("31 Tahun 10 Bulan 27 Hari",dateDiff((new DateTimeImmutable("1990-06-04", new DateTimeZone("Asia/Jakarta")))->format("Y-m-d"),"2022-05-01"));
-	$this->assertEquals("01 Bulan",dateDiff("2022-04-01","2022-05-01"));
+	if(preg_match('/8.1/',phpversion())){
+		$this->assertEquals("01 Bulan",dateDiff("2022-04-01","2022-05-01"));
+	}else{
+		$this->assertEquals("30 Hari",dateDiff("2022-04-01","2022-05-01"));
+	}
 	$this->assertEquals("01 Bulan 10 Hari",dateDiff("2022-04-01","2022-05-11"));
 	$this->assertEquals("01 Tahun 02 Bulan",dateDiff("2021-03-01","2022-05-01"));
 	$this->assertEquals("01 Tahun 02 Hari",dateDiff("2021-05-01","2022-05-03"));
