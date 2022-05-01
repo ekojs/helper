@@ -45,8 +45,8 @@ class HelperTest extends TestCase {
 	}else{
 		$this->assertEquals("30 Hari",dateDiff("2022-04-01","2022-05-01"));
 		$this->assertEquals("01 Bulan 09 Hari",dateDiff("2022-04-01","2022-05-11"));
-		$this->assertEquals("01 Tahun 01 Hari",dateDiff("2021-05-01","2022-05-03"));
-		$this->assertEquals("11 Hari",dateDiff("2022-05-01","2022-05-13"));
+		$this->assertEquals("01 Tahun 02 Hari",dateDiff("2021-05-01","2022-05-03"));
+		$this->assertEquals("12 Hari",dateDiff("2022-05-01","2022-05-13"));
 		$this->assertEquals("01 Tahun 02 Bulan 02 Hari",dateDiff("2021-03-01","2022-05-01"));
 
 	}
